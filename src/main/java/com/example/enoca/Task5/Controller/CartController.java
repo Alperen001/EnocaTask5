@@ -45,22 +45,7 @@ public class CartController {
 		cartService.emptyCart(cartId);
 		return ResponseEntity.ok("Cart has been emptied successfully.");
 	}
-//
-//	@PutMapping("/customer/{customerId}/cart/update")
-//	public ResponseEntity<CartDto> updateCart(@PathVariable Long customerId,
-//			@RequestBody Map<Long, Integer> updatedProducts) {
-//		Cart updatedCart = cartService.updateCart(customerId, updatedProducts);
-//		CartDto cartDto = new CartDto();
-//		cartDto.setId(updatedCart.getId());
-//		cartDto.setTotalPrice(updatedCart.getTotalPrice());
-//		cartDto.setCustomerId(updatedCart.getCustomer().getId());
-//
-//		Map<String, Integer> productMap = updatedCart.getProducts().entrySet().stream()
-//				.collect(Collectors.toMap(entry -> entry.getKey().getName(), Map.Entry::getValue));
-//		cartDto.setProducts(productMap);
-//
-//		return ResponseEntity.ok(cartDto);
-//	}
+
 
 	@PutMapping("/customer/{customerId}/cart/update")
 	public ResponseEntity<CartDto> updateCart(@PathVariable Long customerId,
